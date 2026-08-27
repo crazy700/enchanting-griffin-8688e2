@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Crazy Nexus — Admin Panel</title>
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+    <div class="logo">
+      <span>✦</span>
+      CRAZY<span>NEXUS</span>
+    </div>
+
+    <nav>
+      <a href="#" class="active">📊 Dashboard</a>
+      <a href="#">👥 Users</a>
+      <a href="#">📝 Posts</a>
+      <a href="#">💬 Comments</a>
+      <a href="#">⚙️ Settings</a>
+    </nav>
+
+    <button id="logoutBtn" class="logout-btn">
+      🚪 Logout
+    </button>
+  </aside>
+
+
+  <main class="main">
+
+    <header class="topbar">
+      <div>
+        <h1>Admin Dashboard</h1>
+        <p>Welcome back to Crazy Nexus.</p>
+      </div>
+
+      <div class="admin-profile">
+        <div class="avatar">A</div>
+        <div>
+          <strong>Administrator</strong>
+          <small id="adminEmail">Loading...</small>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="stats">
+
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div>
+          <span>Total Users</span>
+          <h2 id="userCount">0</h2>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📝</div>
+        <div>
+          <span>Total Posts</span>
+          <h2 id="postCount">0</h2>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">💬</div>
+        <div>
+          <span>Comments</span>
+          <h2 id="commentCount">0</h2>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🟢</div>
+        <div>
+          <span>System</span>
+          <h2>Online</h2>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="panel">
+
+      <div class="panel-header">
+        <div>
+          <h2>Quick Actions</h2>
+          <p>Manage your Crazy Nexus website.</p>
+        </div>
+      </div>
+
+      <div class="actions">
+
+        <button class="action-card">
+          <span>👥</span>
+          <strong>Manage Users</strong>
+          <small>View and manage users</small>
+        </button>
+
+        <button class="action-card">
+          <span>📝</span>
+          <strong>Manage Posts</strong>
+          <small>Create or remove posts</small>
+        </button>
+
+        <button class="action-card">
+          <span>💬</span>
+          <strong>Comments</strong>
+          <small>Review user comments</small>
+        </button>
+
+        <button class="action-card">
+          <span>⚙️</span>
+          <strong>Settings</strong>
+          <small>Website configuration</small>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section class="panel">
+
+      <div class="panel-header">
+        <div>
+          <h2>Recent Activity</h2>
+          <p>Latest activity on your website.</p>
+        </div>
+      </div>
+
+      <div id="activityList" class="activity-list">
+
+        <div class="activity">
+          <span>🟢</span>
+          <div>
+            <strong>Admin Panel started</strong>
+            <small>System is ready</small>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+
+</body>
+</html>
